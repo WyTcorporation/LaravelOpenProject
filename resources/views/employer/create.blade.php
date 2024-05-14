@@ -1,0 +1,13 @@
+<x-layout>
+    <x-cart>
+        <form action="{{ route('employer.store') }}" method="POST">
+            @csrf
+            <div class="mb-4">
+                <x-label for="company_name" :required="true">Company Name</x-label>
+                <x-text-input type="text" name="company_name" />
+            </div>
+
+            <x-button class="w-full">Create</x-button>
+        </form>
+    </x-cart>
+</x-layout>
